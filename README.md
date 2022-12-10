@@ -4,11 +4,11 @@
 
 更多细节文档：[Getting started | GameCI](https://game.ci/docs/github/getting-started)
 
-* 把该仓库的**workflows**粘贴到对应仓库的**.github**文件夹下，并提交。
+* 把该仓库的`workflows`粘贴到对应仓库的`.github`文件夹下，并提交。
 * 更改目标平台：
   * 找到`main.yml`中的`# Build`的`targetPlatform`，可用的平台名称参考：[Unity - Scripting API: BuildTarget (unity3d.com)](https://docs.unity3d.com/ScriptReference/BuildTarget.html) （主流平台都是支持的，少许平台不支持）
 
-* 执行Action:**activation**，下载输出的许可证请求（许可证标注的Unity版本与项目使用的版本不一致没关系）。
+* 执行Action: `activation`，下载输出的许可证请求文件（许可证标注的Unity版本与项目使用的版本不一致没关系）。
 
 * 前往Unity许可证申请页面：[Unity - Activation (unity3d.com)](https://license.unity3d.com/manual)
 
@@ -23,7 +23,7 @@
   * UNITY_EMAIL：申请这份许可证使用的Unity账户的登陆邮箱
   * UNITY_PASSWORD：密码
 
-* 执行`Actions 😎`即可（默认在push，pr时自动执行），编译用时视付费情况，第一次编译较久，第二次起稍快一些。（大约15~30分钟）
+* 执行Action: `Actions 😎`即可（默认在push，pr时自动执行），编译用时视付费情况，第一次编译较久，第二次起稍快一些。（大约15~30分钟）
 
 # 目前踩坑
 
@@ -43,4 +43,4 @@
 
 # 其他
 
-* 这里删去了`Test runner`的流程。此过程用途暂时没弄明白，如果是编译出错，可以检查`Builder`流程最后一部分的日志。该流程会花费更多时间，可能用于更具体地报告编译错误内容？（暂不明）
+* 这里删去了`Test runner`的流程。对于Gamejam来说不太必要，删去可以节省一些时间。
